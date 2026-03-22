@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 // ─── Middleware ───────────────────────────────────────────────────────────────
 app.use(cors({
     origin: '*', // Allow all origins for local development
-    methods: ['POST'],
+    methods: ['GET', 'POST'],
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -17,6 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 // ─── MySQL Connection ─────────────────────────────────────────────────────────
 const db = mysql.createConnection({
     host:     process.env.DB_HOST,
+    port:     process.env.DB_PORT || 3306,
     user:     process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
