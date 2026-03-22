@@ -1,0 +1,10 @@
+{
+  "_comment": "This file tells Vercel to treat this as a static website (HTML/CSS/JS only). It prevents Vercel from trying to run server.js as a serverless function. The actual backend runs separately on Render and database on Railway.",
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    }
+  ]
+}
