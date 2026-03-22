@@ -4,6 +4,10 @@
 # Node dependencies - too large, installed via npm install
 node_modules/
 
+# Node package files - not needed on GitHub since Vercel serves static HTML only
+package.json
+package-lock.json
+
 # Logs
 npm-debug.log*
 yarn-debug.log*
