@@ -126,7 +126,7 @@ if (contactForm) {
 	contactForm.addEventListener('submit', validateForm);
 }
 
-// ─── Send form data to Node.js backend ───────────────────────────────────────
+// Send form data to Node.js backend
 function sendMail() {
 	const data = {
 		name:    nameInput.value.trim(),

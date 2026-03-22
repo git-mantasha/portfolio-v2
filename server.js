@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// ─── Middleware ───────────────────────────────────────────────────────────────
+// Middleware
 app.use(cors({
     origin: '*', // Allow all origins for local development
     methods: ['GET', 'POST'],
@@ -14,7 +14,7 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// ─── MySQL Connection ─────────────────────────────────────────────────────────
+// MySQL Connection
 const db = mysql.createConnection({
     host:     process.env.DB_HOST,
     port:     process.env.DB_PORT || 3306,
@@ -32,7 +32,7 @@ db.connect((err) => {
     console.log('✅ Connected to MySQL database:', process.env.DB_NAME);
 });
 
-// ─── Contact Form Route ───────────────────────────────────────────────────────
+// Contact Form Route
 app.post('/contact', (req, res) => {
     const { name, email, message } = req.body;
 
@@ -72,12 +72,12 @@ app.post('/contact', (req, res) => {
     });
 });
 
-// ─── Health Check Route ───────────────────────────────────────────────────────
+// Health Check Route
 app.get('/', (req, res) => {
     res.send('✅ Mantasha Portfolio Backend is running.');
 });
 
-// ─── Start Server ─────────────────────────────────────────────────────────────
+// Start Server
 app.listen(PORT, () => {
     console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
