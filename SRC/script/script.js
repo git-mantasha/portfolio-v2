@@ -134,7 +134,7 @@ function sendMail() {
 		message: messageInput.value.trim()
 	};
 
-	fetch('http://localhost:3000/contact', {
+	fetch('https://portfolio-backend-4bdq.onrender.com/contact', {
 		method:  'POST',
 		headers: { 'Content-Type': 'application/json' },
 		body:    JSON.stringify(data)
