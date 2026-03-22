@@ -44,16 +44,14 @@ When someone fills the contact form on the website, the data goes to the Node.js
 
 ## Project structure
 
-Portfolio/
-├── Assets/          (images and icons)
-├── SRC/
-│   ├── pages/       (all HTML pages)
-│   ├── script/      (JavaScript file)
-│   └── style/       (CSS file)
-├── database/        (SQL file to create the database table)
-├── server.js        (backend server)
-├── vercel.json      (Vercel config)
-└── .gitignore
+- **Assets** - images and icons
+- **SRC/pages** - all HTML pages
+- **SRC/script** - JavaScript file
+- **SRC/style** - CSS file
+- **database** - SQL file to create the database table
+- **server.js** - backend server
+- **vercel.json** - Vercel config
+- **.gitignore** - files ignored by Git
 
 ## Note
 
